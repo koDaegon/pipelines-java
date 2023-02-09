@@ -30,4 +30,6 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Update dependency graph
-      uses: advanced-security/maven-dependency-submission-action@v2.0
+      uses: advanced-security/maven-dependency-submission-action@v1
+      with:
+        repo-token: ${{ secretrs.GITHUB_TOKEN }}
